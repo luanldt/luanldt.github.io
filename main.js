@@ -1,4 +1,4 @@
-const socket = io('https://demo-peerjs.herokuapp.com/ ');
+const socket = io('https://demo-peerjs.herokuapp.com/');
 
 $('#div-chat').hide();
 
