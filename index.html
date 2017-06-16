@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="jquery.js"></script>
+  <script src="peer.min.js"></script>
+  <script src="socket.io.js"></script>
+
+  <title>Peerjs - Demo</title>
+</head>
+<body>
+  <div id="div-chat">
+    <p>Online User</p>
+    <ul id="userOnline"></ul>
+
+
+    <h3 id="mypeer">Your Id: <span></span></h3>
+
+    <video id="localStream" width="500" controls=""></video>
+    <br/>
+    <video id="remoteStream" width="500"  controls=""></video>
+    <br/>
+    <input id="remoteId" placeholder="Remote Id" />
+    <button id="call">Call</button>
+  </div>
+  <br/>
+  <div id="div-dang-ky">
+    <input id="signupText" /><button id="signup">Sign Up</button>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
