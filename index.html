@@ -1,34 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="jquery.js"></script>
-  <script src="peer.min.js"></script>
-  <script src="socket.io.js"></script>
-
-  <title>Peerjs - Demo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hey, Luan - Code & Soul</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            animation: fadeIn 1s ease-in;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #ffd700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .about-me {
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin: 20px 0;
+            background: rgba(0, 255, 204, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            border: 2px dashed #00ffcc;
+            color: #e0e0e0;
+            animation: pulse 2s infinite;
+        }
+        .projects {
+            margin-top: 30px;
+            font-size: 1em;
+            color: #ccc;
+        }
+        .projects a {
+            color: #00ffcc;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .projects a:hover {
+            text-decoration: underline;
+        }
+        .strava-embed {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes pulse {
+            0% { border-color: #00ffcc; }
+            50% { border-color: #ffd700; }
+            100% { border-color: #00ffcc; }
+        }
+        @media (max-width: 600px) {
+            .container { padding: 20px; }
+            h1 { font-size: 2em; }
+            .about-me { font-size: 1em; }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div id="div-chat">
-    <p>Online User</p>
-    <ul id="userOnline"></ul>
-
-
-    <h3 id="mypeer">Your Id: <span></span></h3>
-
-    <video id="localStream" width="500" controls=""></video>
-    <br/>
-    <video id="remoteStream" width="500"  controls=""></video>
-    <br/>
-    <input id="remoteId" placeholder="Remote Id" />
-    <button id="call">Call</button>
-  </div>
-  <br/>
-  <div id="div-dang-ky">
-    <input id="signupText" /><button id="signup">Sign Up</button>
-  </div>
-  <script src="main.js"></script>
+    <div class="container">
+        <h1>Hey, I’m Luan</h1>
+        <div class="about-me">
+            <p>I’m a code-wielding adventurer, weaving digital dreams into reality. By day, I sculpt elegant solutions as a developer; by dusk, I chase the wind on badminton courts or conquer trails with every stride. After the sun sets, I dive into pages of epic tales, letting stories fuel my restless imagination. I carve out moments to pamper my cat and unwind in chill vibes with my girlfriend. Life’s a canvas, and I’m painting it with tech, sweat, and wonder.</p>
+        </div>
+        <div class="strava-embed">
+            <h3>My Strava Chronicles</h3>
+            <iframe height='454' width='300' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/athletes/103131768/latest-rides/ad175e1a7c839198e4973c8d0c83c0a77c9e601e'></iframe>
+        </div>
+        <div class="projects">
+            <p>Some things I’ve built: 
+                <a href="https://n8n.heyluan.com" target="_blank">n8n</a> | 
+                <a href="https://ardrive.heyluan.com" target="_blank">ArDrive</a>
+            </p>
+        </div>
+    </div>
 </body>
 </html>
